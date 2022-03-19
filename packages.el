@@ -54,13 +54,16 @@
       "i" #'gitter-input
       (kbd "C-j") 'gitter-goto-next-message
       (kbd "C-k") 'gitter-goto-prev-message
-      (kbd "<tab>") 'gitter-switch-buffer)
+      "o" 'link-hint-open-link
+      "r" 'gitter
+      (kbd "<tab>") 'gitter-switch-buffer
+      "q" #'kill-current-buffer)
 
     (evil-define-key 'normal gitter-input-mode-map
-      "q" #'kill-current-buffer
       (kbd "C-j")   'gitter-goto-next-message
       (kbd "C-k")   'gitter-goto-prev-message
-      (kbd "<tab>") 'gitter-switch-buffer)
+      (kbd "<tab>") 'gitter-switch-buffer
+      "q" #'kill-current-buffer)
 
     (evil-define-key 'insert gitter-input-mode-map
       (kbd "S-<return>") 'gitter-send-message)))

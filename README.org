@@ -16,24 +16,42 @@
 - [[#key-bindings][Key bindings]]
 
 * Description
-This layer adds support for something.
+This layer adds support for my [[https://github.com/dalanicolai/gitter.el][substantially extended fork]] of [[https://github.com/xuchunyang/gitter.el][gitter.el]].
 
 ** Features:
-  - Autocomplete
-  - Lint
-  - Refactor
-  - ...
+  - Uses [[https://developer.gitter.im/docs/streaming-api][Gitter's streaming API]] for live message updates
+  - Formatted code blocks
+  - Support for avatars in graphical windows
 
 * Install
-To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =gitter= to the existing =dotspacemacs-configuration-layers= list in this
-file.
+To use this configuration layer, clone the layer into a directory named =gitter=
+within your =private= directory using:
+#+begin_src shell
+ (git clone https://github.com/dalanicolai/gitter-layer.git ~/.emacs.d/private/gitter 
+#+end_src
+
+Alternative clone the layer to some other directory and create a symbolic link
+named =gitter= from within your =private= directory to the repo directory as
+follows:
+#+begin_src shell
+  ln -s /path/to/repo ~/.emacs.d/private/gitter
+#+end_src
+
+Subsequently add the layer to your =~/.spacemacs=. You will need to add =gitter=
+to the existing =dotspacemacs-configuration-layers= list in this file.
 
 * Key bindings
 
-| Key Binding | Description    |
-|-------------+----------------|
-| ~SPC x x x~ | Does thing01   |
+| Key Binding               | Description          |
+|---------------------------+----------------------|
+| ~i~                       | Open input buffer    |
+| ~S-RET~ (in input buffer) | Send message         |
+| ~C-j~                     | Next message         |
+| ~C-K~                     | Previous message     |
+| ~o~                       | Follow link          |
+| ~r~                       | Rooms (switch)       |
+| ~q~                       | Kill input buffer    |
+| ~TAB~                     | Select other buffers |
 
 # Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
 # Examples:
