@@ -43,6 +43,8 @@
 (defconst gitter-packages
   '((gitter :location (recipe :fetcher github
                               :repo "dalanicolai/gitter.el"))))
+                              :repo "dalanicolai/gitter.el"))
+    shr-tag-pre-highlight))
 
 (defun gitter/init-gitter ()
   (use-package gitter
@@ -68,3 +70,7 @@
 
     (evil-define-key 'insert gitter-input-mode-map
       (kbd "S-<return>") 'gitter-send-message)))
+
+(defun gitter/init-shr-tag-pre-highlight ()
+    (use-package shr-tag-pre-highlight
+      :after shr))
