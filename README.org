@@ -21,6 +21,7 @@ This layer adds support for my [[https://github.com/dalanicolai/gitter.el][subst
 ** Features:
   - Uses [[https://developer.gitter.im/docs/streaming-api][Gitter's streaming API]] for live message updates
   - Formatted code blocks
+  - Emoji support
   - Support for avatars in graphical windows
 
 * Install

@@ -49,6 +49,7 @@
     :defer t
     :init
     (spacemacs/set-leader-keys "acg" 'gitter)
+    (add-hook 'gitter-mode-hook 'emojify-mode)
     :config
     (evil-define-key 'motion gitter-mode-map
       "i" #'gitter-input
