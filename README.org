@@ -43,16 +43,19 @@ to the existing =dotspacemacs-configuration-layers= list in this file.
 
 * Key bindings
 
-| Key Binding               | Description          |
-|---------------------------+----------------------|
-| ~i~                       | Open input buffer    |
-| ~S-RET~ (in input buffer) | Send message         |
-| ~C-j~                     | Next message         |
-| ~C-K~                     | Previous message     |
-| ~o~                       | Follow link          |
-| ~r~                       | Rooms (switch)       |
-| ~q~                       | Kill input buffer    |
-| ~TAB~                     | Select other buffers |
+| Key Binding               | Description            |
+|---------------------------+------------------------|
+| ~i~                       | Open input buffer      |
+| ~S-RET~ (in input buffer) | Send message           |
+| ~C-j~                     | Next message           |
+| ~C-K~                     | Previous message       |
+| ~d~                       | Ace print message data |
+| ~e~                       | Ace edit message       |
+| ~m~                       | Ace insert mention     |
+| ~o~                       | Follow link            |
+| ~r~                       | Rooms (switch)         |
+| ~q~                       | Kill input buffer      |
+| ~TAB~                     | Select other buffers   |
 
 # Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
 # Examples:

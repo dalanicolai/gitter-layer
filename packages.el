@@ -42,7 +42,6 @@
 
 (defconst gitter-packages
   '((gitter :location (recipe :fetcher github
-                              :repo "dalanicolai/gitter.el"))))
                               :repo "dalanicolai/gitter.el"))
     shr-tag-pre-highlight))
 
@@ -52,11 +51,18 @@
     :init
     (spacemacs/set-leader-keys "acg" 'gitter)
     (add-hook 'gitter-mode-hook 'emojify-mode)
+    (add-hook 'gitter-mode-hook 'spacemacs/disable-hl-line-mode)
+
     :config
     (evil-define-key 'motion gitter-mode-map
       "i" #'gitter-input
       (kbd "C-j") 'gitter-goto-next-message
       (kbd "C-k") 'gitter-goto-prev-message
+
+      "d" 'gitter-ace-data
+      "e" 'gitter-ace-edit
+      "m" 'gitter-ace-mention
+
       "o" 'link-hint-open-link
       "r" 'gitter
       (kbd "<tab>") 'gitter-switch-buffer
